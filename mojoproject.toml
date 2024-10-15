@@ -1,0 +1,16 @@
+[project]
+authors = ["Teïlo M <teilomillet@gmail.com>"]
+channels = ["conda-forge", "https://conda.modular.com/max"]
+description = "Add a short description here"
+name = "operatio"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+max = "*"
+transformers = ">=4.45.2,<5"
+pytorch = ">=2.4.1,<3"
+accelerate = ">=1.0.1,<2"
+numpy = ">=1.26.4,<2"
