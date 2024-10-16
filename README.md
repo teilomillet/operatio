@@ -1,5 +1,7 @@
 # Operatio
 
+![Operatio](img/operatio-logo.svg)
+
 Operatio is a tool for manipulating language models using task vectors. It's designed to help me learned about the underlying of the task arithmetic and about the mojo lang, it's also a tool to explore large language models through weight manipulation. I might try to implement the papers in the pdf/.
 
 ## What are Task Vectors?
