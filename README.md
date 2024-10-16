@@ -35,12 +35,12 @@ mojo run main.mojo <operation> <base_model> [<ft_model>] [--output_dir <dir>] [-
 - full: Run the complete pipeline
 
 ## Arguments:
-`
-`<operation>`: The operation to perform (load, extract, transform, or full)
-`<base_model>`: Path or identifier for the base model
-`<ft_model>`: Path or identifier for the fine-tuned model (required for extract and full operations)
-`--output_dir`: Directory to save output files (default: "models")
-`--scaling_coef`: Scaling coefficient for the task vector (default: 0.5)
+
+- `<operation>`: The operation to perform (load, extract, transform, or full)
+- `<base_model>`: Path or identifier for the base model
+- `<ft_model>`: Path or identifier for the fine-tuned model (required for extract and full operations)
+- `--output_dir`: Directory to save output files (default: "models")
+- `--scaling_coef`: Scaling coefficient for the task vector (default: 0.5)
 
 ## Examples:
 
