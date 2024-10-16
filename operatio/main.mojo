@@ -1,19 +1,21 @@
-import sys
-from operatio.run import operatio_run
+# operatio/main.mojo
+
+from operatio.cli import parse_args
+from operatio.run import load_models, extract_difference, transform_model, full_pipeline
 
 fn main() raises:
-    var args = sys.argv()
-    if len(args) < 2:
-        print("Please specify the operation to perform. Choices include:")
-        print("- operatio")
-        # Add more operations here in the future
-        return
-
-    var operation = String(args[1])
-    if operation == "operatio":
-        try:
-            operatio_run()
-        except e:
-            print("Operation failed: ", e)
-    else:
-        raise Error("Unrecognized operation: " + operation)
+    try:
+        var args = parse_args()
+        
+        if args.operation == "load":
+            load_models(args)
+        elif args.operation == "extract":
+            extract_difference(args)
+        elif args.operation == "transform":
+            transform_model(args)
+        elif args.operation == "full":
+            full_pipeline(args)
+        else:
+            raise Error("Unknown operation: " + args.operation)
+    except e:
+        print("An error occurred: ", e)
